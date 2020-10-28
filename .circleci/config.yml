@@ -7,10 +7,8 @@ workflows:
   node-tests:
     jobs:
       - node/test
-  main:
-    jobs:
-      - build:
-          context: SonarCloud
+    build:
+        context: SonarCloud
 
 
 jobs:
