@@ -1,16 +1,5 @@
 version: 2.1
-#orbs:
- # node: circleci/node@3.0.0
-  #sonarcloud: sonarsource/sonarcloud@1.0.1
-
-#workflows:
- # node-tests:
-  #  jobs:
-   #   - node/test
-
-
-  
-  jobs:
+jobs:
   build:
     docker:
       - image: 'node:latest'
