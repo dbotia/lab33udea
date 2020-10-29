@@ -9,5 +9,5 @@ jobs:
       - checkout
       - run:
           name: Install and Make
-          command: npm run coveralls
+          command: npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls
       - coveralls/upload
