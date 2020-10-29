@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run:
           #name: Install dependencies and build project
-          command: run_sonar_cloud 
+          command: sonar-scanner 
       - sonarcloud/scan
 
 orbs:
