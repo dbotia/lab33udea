@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  coveralls: coveralls/coveralls@1.0.6
+  coveralls: coveralls/coveralls@1.0.6, mocha/mocha@8.2.0, chai/chai@4.2.0, istanbul/istanbul@1.1.0-alpha.1
 jobs:
   build:
     docker:
@@ -9,5 +9,5 @@ jobs:
       - checkout
       - run:
           name: Install and Make
-          command: npm i mocha --save-dev | npm i chai  --save-dev | npm i istanbul --save-dev | npm i coveralls --save-dev | npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls
+          command: npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls
       - coveralls/upload
