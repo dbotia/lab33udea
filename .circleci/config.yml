@@ -1,20 +1,7 @@
 version: 2.1
-jobs:
-  build:
-    docker:
-      - image: 'node:latest'
-    steps:
-      - checkout
-      - run:
-          #name: Install dependencies and build project
-          command: sonar-scanner 
-      - sonarcloud/scan
-
 orbs:
-  sonarcloud: sonarsource/sonarcloud@1.0.1
-
+  node: circleci/node@3.0.0
 workflows:
-  main:
+  node-tests:
     jobs:
-      - build:
-          context: SonarCloud
+      - node/test
