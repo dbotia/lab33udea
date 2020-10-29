@@ -1,8 +1,8 @@
 version: 2.1
 orbs:
-  coveralls: coveralls/coveralls@1.0.6, 
-  mocha: mocha/mocha@8.2.0, 
-  chai: chai/chai@4.2.0, 
+  coveralls: coveralls/coveralls@1.0.6 
+  mocha: mocha/mocha@8.2.0 
+  chai: chai/chai@4.2.0 
   istanbul: istanbul/istanbul@1.1.0-alpha.1
 jobs:
   build:
