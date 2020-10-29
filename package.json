@@ -4,7 +4,8 @@
   "description": "Calculadora ",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "istanbul": "^1.1.0-alpha.1",
     "mocha": "^8.2.0"
   }
 }
